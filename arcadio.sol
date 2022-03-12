@@ -760,4 +760,13 @@ contract ODON is
         address to,
         uint256 amount
     ) internal virtual {}
+
+     function updateDeveloperWalletAddress(address _developerWalletAddress)
+        external
+        onlyOwner
+    {
+        developerWallet = _developerWalletAddress;
+        emit UpdateDeveloperWallet(_developerWalletAddress);
+    }
+
 }
